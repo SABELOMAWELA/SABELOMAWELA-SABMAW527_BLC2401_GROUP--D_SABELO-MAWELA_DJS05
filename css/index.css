@@ -1,0 +1,28 @@
+.subtractbtn{
+    /* background-color: #f2f2f2; */
+    border-color: aliceblue;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    background-color: red;
+    font-size: 25px ;
+}
+.plusbtn{
+    color: #000;
+    border-color: aliceblue;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 13px 20px;
+    background-color: aquamarine;
+    font-size: 20px ;
+   
+
+}
+.reset-btn{
+    background-color:white ;
+    cursor: pointer;
+    padding: 13px 20px;
+    border-radius: 20px;
+    color: #000;
+}
