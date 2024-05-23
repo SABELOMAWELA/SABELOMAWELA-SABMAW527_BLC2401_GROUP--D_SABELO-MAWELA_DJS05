@@ -5,9 +5,11 @@ const initialState = {
 
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
+const RESET = 'RESET'
 
 const incrementAction = () => ({ type: INCREMENT });
 const decrementAction = () => ({ type: DECREMENT });
+const resetAction = () => ({type: RESET})
 
 const button = document.querySelector('.plusbtn');
 console.log(button)
@@ -25,6 +27,13 @@ subtractButton.addEventListener('click', () => {
    store.dispatch({ type: DECREMENT });
 });
 
+const reset = document.querySelector('.reset-btn')
+
+reset.addEventListener('click', () => {
+    store.dispatch({ type: RESET });
+});
+
+
 
   const counterReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -32,6 +41,8 @@ subtractButton.addEventListener('click', () => {
         return { count: state.count + 1 };
       case DECREMENT:
         return { count: state.count - 1 };
+        case RESET : 
+        return {count: state.count = 0};
       default:
         return state;
     }
