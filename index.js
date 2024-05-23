@@ -14,7 +14,7 @@ console.log(button)
 
 
 button.addEventListener('click', () => {
-    console.log("hello")
+    store.dispatch({ type: INCREMENT });
 
 });
 
@@ -22,7 +22,7 @@ const subtractButton = document.querySelector('.subtractbtn');
 
 
 subtractButton.addEventListener('click', () => {
-    console.log("hey")
+   store.dispatch({ type: DECREMENT });
 });
 
 
@@ -60,3 +60,10 @@ subtractButton.addEventListener('click', () => {
   
     return { getState, dispatch, subscribe };
   }
+  const store = createStore(counterReducer);
+  console.log(store.getState());
+
+// Subscribe to state changes
+store.subscribe(() => {
+  console.log(store.getState());
+});
